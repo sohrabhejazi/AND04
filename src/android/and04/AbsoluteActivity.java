@@ -1,3 +1,4 @@
+// Create by SeyedSohrab Hejazi
 package android.and04;
 
 import java.util.Vector;
@@ -25,7 +26,7 @@ public class AbsoluteActivity extends Activity  {
 			private int iconWidth = 75;
 			private int leftBorder = 5;
 			private int topBorder = 50;
-			
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 	super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class AbsoluteActivity extends Activity  {
 			// TODO Auto-generated method stub
 			getSizes();
 		}
-	
+
 	}
 	);
 	ivLinear = (ImageView) this.findViewById(R.id.icon_llo);
@@ -61,7 +62,7 @@ public class AbsoluteActivity extends Activity  {
 	//this.getSizes();
 	this.layout();
 	}
-	
+
 	private void layout() {
 		Display display = this.getWindowManager().getDefaultDisplay();
 		int displayWidth = display.getWidth();
@@ -83,7 +84,7 @@ public class AbsoluteActivity extends Activity  {
 			x += buttonWidth;
 			}
 			}
-	
+
 	// TODO hier noch Logging ergänzen!
 	private void getSizes() {
 	// Ermittlung der maximalen Button-Breite
@@ -92,7 +93,7 @@ public class AbsoluteActivity extends Activity  {
 		Log.d(TAG, button.getText() + "-Width: "+ button.getWidth());
 	tempWidth = Math.max(tempWidth, button.getWidth());
 	}
-	
+
 	// Ermittlung der Icon-Größe
 	Log.d(TAG, "MaxButtonWidth: " + tempWidth);
 	int iconWidth = icons.elementAt(0).getWidth();
