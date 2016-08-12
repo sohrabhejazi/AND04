@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   
+    android:layout_width="match_parent"
+    android:foreground="@color/red_t"
+     
+    android:layout_height="match_parent" >
+    
+	<TextView
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_gravity="left|bottom"
+	android:layout_marginBottom="30px"
+	android:layout_marginLeft="30px"
+	android:padding="20px"
+	android:background="#aa000000"
+	android:textColor="#ffffffff"
+	android:text="@string/mare_image" />
+    <Button
+     android:textColor="@color/blue"    
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginBottom="30px"
+	android:layout_marginRight="30px"
+	android:layout_gravity="right|bottom"
+	android:padding="20px"
+	android:background="#aa999999"
+	
+	android:text="@string/linear_lo"
+	android:textStyle="bold" />  
+</FrameLayout>

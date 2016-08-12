@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView
+	android:id="@+id/text"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_x="20px"
+	android:layout_y="1px"
+	android:text="@string/hello" />
+	<ImageView
+	    android:id="@+id/icon_llo"
+	android:src="@drawable/icon_l" 
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+	<Button
+	    android:id="@+id/button_llo"
+	android:width="230px"
+	android:text="@string/linear_lo" 
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+	<ImageView
+	    android:id="@+id/icon_tlo"
+	android:src="@drawable/icon_r"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+	<Button
+	    android:id="@+id/button_tlo"
+	android:text="@string/relative_lo"
+	android:width="230px"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+	<ImageView
+	    android:id="@+id/icon_rlo"
+	android:src="@drawable/icon_a" 
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+	<Button
+	    android:id="@+id/button_rlo"
+	android:text="@string/absolute_lo"
+	android:width="230px"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+	<ImageView
+	    android:id="@+id/icon_flo"
+	android:src="@drawable/icon_f"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+	<Button
+	    android:id="@+id/button_flo"
+	android:text="@string/frame_lo" 
+	android:width="230px"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+</AbsoluteLayout>

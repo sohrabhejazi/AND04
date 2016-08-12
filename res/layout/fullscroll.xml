@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content">
+<HorizontalScrollView
+android:layout_width="wrap_content"
+android:layout_height="wrap_content">
+	<FrameLayout
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+		<ImageView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:src="@drawable/dsc_7486_q_wide" />
+		<Button
+			android:id="@+id/button_back_ol"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/back"
+			android:padding="10px"
+			android:background="@color/red_t"
+			android:textColor="@color/white"
+			android:textStyle="bold"
+			android:layout_gravity="top|left"
+			android:layout_marginLeft="20px"
+			android:layout_marginTop="20px" />
+		<Button
+			android:id="@+id/button_fullscroll"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="scrollbares Vollbild"
+			android:padding="10px"
+			android:background="@color/red_t"
+			android:textColor="@color/white"
+			android:textStyle="bold"
+			android:layout_gravity="center_horizontal"
+			android:layout_marginTop="20px" />
+	</FrameLayout>
+</HorizontalScrollView>
+</ScrollView>

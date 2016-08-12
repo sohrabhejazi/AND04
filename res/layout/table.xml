@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:shrinkColumns="0,2"
+android:stretchColumns="1,3" 
+>
+<TableRow>
+<TextView
+android:layout_span="4"
+android:layout_marginTop="5px"
+android:layout_marginBottom="5px"
+android:text="@string/hello" />
+</TableRow>
+<TableRow>
+<ImageView
+android:src="@drawable/icon_l" />
+<Button
+android:text="@string/linear_lo" />
+<ImageView
+android:src="@drawable/icon_r" />
+<Button
+android:text="@string/relative_lo" />
+</TableRow>
+<TableRow>
+<ImageView
+android:src="@drawable/icon_a" />
+<Button
+android:text="@string/absolute_lo" />
+<ImageView
+android:src="@drawable/icon_f" />
+<Button
+android:text="@string/frame_lo" />
+</TableRow>
+
+</TableLayout>
