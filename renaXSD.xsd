@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/RenaXMLSchema" xmlns:tns="http://www.example.org/RenaXMLSchema" elementFormDefault="qualified">
+
+    <element name="RenaRoot" >
+        <complexType>
+            <sequence>
+                <element name="LoginSuccess" type="boolean" minOccurs="0" maxOccurs="1" default="false"> </element>
+                <element name="Command"  maxOccurs="1" minOccurs="0">
+                    <complexType>
+                        <sequence>
+                            <element name="PullStammdaten" type="boolean" minOccurs="0" maxOccurs="1" default="false"> </element>
+                            <element name="PullAuftragsdaten" type="boolean" minOccurs="0" maxOccurs="1" default="false"> </element>
+                            <element name="PullPolterNummernKreis" type="boolean" minOccurs="0" maxOccurs="1" default="false"> </element>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="Stammdaten" minOccurs="0" maxOccurs="1">
+                    <complexType>
+                        <sequence>
+                            <element name="BaumartTable"  maxOccurs="1" minOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="BaumartItem" type="tns:baumartItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="UniqueBaumNr">
+                                    <selector xpath="tns:BaumartItem" />
+                                    <field xpath="@baumNr" />
+                                </unique>
+                                <unique name="UniqueBaumKurz">
+                                    <selector xpath="tns:BaumartItem" />
+                                    <field xpath="tns:baumKurz" />
+                                </unique>
+                                <unique name="UniqueBaumName">
+                                    <selector xpath="tns:BaumartItem" />
+                                    <field xpath="tns:baumName" />
+                                </unique>
+                            </element>
+                            <element name="SorteTable"  maxOccurs="1" minOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="SorteItem" type="tns:sorteItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="UniqueSorteNr">
+                                    <selector xpath="tns:SorteItem" />
+                                    <field xpath="@sorteNr" />
+                                </unique>
+                                <unique name="UniqueSorteKurz">
+                                    <selector xpath="tns:SorteItem" />
+                                    <field xpath="tns:sorteKurz" />
+                                </unique>
+                                <unique name="UniqueSorteName">
+                                    <selector xpath="tns:SorteItem" />
+                                    <field xpath="tns:sorteName" />
+                                </unique>
+                            </element>
+                            <element name="GueteTable"  maxOccurs="1" minOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="GueteItem" type="tns:gueteItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="UniqueGueteNr">
+                                    <selector xpath="tns:GueteItem" />
+                                    <field xpath="@gueteNr" />
+                                </unique>
+                                <unique name="UniqueGueteKurz">
+                                    <selector xpath="tns:GueteItem" />
+                                    <field xpath="tns:gueteKurz" />
+                                </unique>
+                            </element>
+                            <element name="RelationTable-1"  maxOccurs="1" minOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="Relation-1-Item" type="tns:Relation-1-ItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="uniqueKeyCode">
+                                    <selector xpath="tns:Relation-1-Item" />
+                                    <field xpath="tns:baumNr"/>
+                                    <field xpath="tns:sorteNr"/>
+                                    <field xpath="tns:gueteNr"/>
+                                </unique>
+                            </element>
+                            <element name="RelationTable-2"  maxOccurs="1" minOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="Relation-2-Item" type="tns:Relation-2-ItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="uniqueKeyCode2">
+                                    <selector xpath="tns:Relation-2-Item" />
+                                    <field xpath="tns:kubNr"/>
+                                    <field xpath="tns:sorteNr"/>
+                                </unique>
+                            </element>
+                            <element name="KauferTable"  maxOccurs="1" minOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="KauferItem" type="tns:KauferItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="UniquekauferNr">
+                                    <selector xpath="tns:KauferItem" />
+                                    <field xpath="@kauferNr" />
+                                </unique>
+                            </element>
+                            <element name="KubaturVerfahrenTable"  maxOccurs="1" minOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="KubaturVerfahrenItem" type="tns:KubaturVerfahrenType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="UniqueKubaturNr">
+                                    <selector xpath="tns:KubaturVerfahrenItem" />
+                                    <field xpath="@kubNr" />
+                                </unique>
+                            </element>
+                            <element name="ForstAmtUndRevierTables" minOccurs="1" maxOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="ForstAmtTable" type="tns:ForstAmtType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="UniqueFoa">
+                                    <selector xpath="tns:ForstAmtTable" />
+                                    <field xpath="@FoaNr" />
+                                </unique>
+                                <unique name="UniqueFoaName">
+                                    <selector xpath="tns:ForstAmtTable" />
+                                    <field xpath="tns:FoaName" />
+                                </unique>
+                                <unique name="UniqueRevier">
+                                    <selector xpath="tns:ForstAmtTable/*" />
+                                    <field xpath="@RevNr" />
+                                </unique>
+                                <unique name="UniqueRevierName">
+                                    <selector xpath="tns:ForstAmtTable/*" />
+                                    <field xpath="tns:RevName" />
+                                </unique>
+                            </element>
+                        </sequence>
+                    </complexType>
+                </element>
+                <element name="Auftragsdaten" minOccurs="1" maxOccurs="1">
+                    <complexType>
+                        <sequence>
+                            <element name="PolterTable"  maxOccurs="1" minOccurs="1">
+                                <complexType>
+                                    <sequence>
+                                        <element name="PoltertItem" type="tns:polterItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="UniquePolterNr">
+                                    <selector xpath="tns:PoltertItem" />
+                                    <field xpath="@polterNr" />
+                                </unique>
+                            </element>
+                            <element name="KopfdatenTable"  maxOccurs="1" minOccurs="0">
+                                <complexType>
+                                    <sequence>
+                                        <element name="KopfdatenItem" type="tns:kopfdatenItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="uniquekopfdaten">
+                                    <selector xpath="tns:KopfdatenItem" />
+                                    <field xpath="tns:arbeitsSchritt"/>
+                                    <field xpath="tns:auftragsNr"/>
+                                    <field xpath="tns:revierNr"/>
+                                    <field xpath="tns:jahr"/>
+                                </unique>
+                            </element>
+                            <element name="NbeTable"  maxOccurs="1" minOccurs="0">
+                                <complexType>
+                                    <sequence>
+                                        <element name="NbeItem" type="tns:nbeItemType" maxOccurs="unbounded" minOccurs="1"></element>
+                                    </sequence>
+                                </complexType>
+                                <unique name="uniqueNbe">
+                                    <selector xpath="tns:NbeItem" />
+                                    <field xpath="@holzNr"/>
+                                    <field xpath="tns:polterNr"/>
+                                    <field xpath="tns:teilStueck"/>
+                                </unique>
+                            </element>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+            <attribute name="BenutzerName" use="required">
+                <simpleType>
+                    <restriction base="string">
+                        <minLength value="1"></minLength>
+                    </restriction>
+                </simpleType>
+            </attribute>
+            <attribute name="Passwort" use="required">
+                <simpleType>
+                    <restriction base="string">
+                        <minLength value="1"></minLength>
+                    </restriction>
+                </simpleType>
+            </attribute>
+        </complexType>
+    </element>
+
+    <complexType name="nbeItemType">
+        <sequence>
+            <element name="polterNr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="kauferNr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="baumartNr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="sorteNr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="gueteNr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="teilStueck" maxOccurs="1" minOccurs="1" default="0">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="-1"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="laenge" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="float">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="durchmesser" maxOccurs="1"
+                minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="stueck" maxOccurs="1" minOccurs="1" default="0">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="-1"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="menge" maxOccurs="1" minOccurs="1" default="0">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="-1"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+
+        </sequence>
+        <attribute name="holzNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="kopfdatenItemType">
+        <sequence>
+            <element name="arbeitsSchritt" maxOccurs="1"
+                minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="auftragsNr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="revierNr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="jahr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="2016"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="ForstAmtType">
+        <sequence>
+            <element name="FoaName" type="string" maxOccurs="1" minOccurs="1"></element>
+            <element name="Reviere" type="tns:RevierType" maxOccurs="unbounded" minOccurs="1"></element>
+        </sequence>
+        <attribute name="FoaNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="RevierType">
+        <sequence>
+            <element name="RevName" type="string" maxOccurs="1" minOccurs="1"></element>
+        </sequence>
+        <attribute name="RevNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="KubaturVerfahrenType">
+        <sequence>
+            <element name="kubName" type="string" maxOccurs="1" minOccurs="1"></element>
+            <element name="vermNr" type="int"></element>
+            <element name="vermKurz" type="string"></element>
+            <element name="vermName" type="string"></element>
+        </sequence>
+        <attribute name="kubNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="KauferItemType">
+        <sequence>
+            <element name="kauferName" type="string"></element>
+        </sequence>
+        <attribute name="kauferNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="Relation-2-ItemType">
+        <sequence>
+            <element name="kubNr">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="sorteNr">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="Relation-1-ItemType">
+        <sequence>
+            <element name="baumNr">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="sorteNr">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="gueteNr">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+    </complexType>
+
+    <complexType name="baumartItemType">
+        <sequence>
+            <element name="baumKurz" type="string"></element>
+            <element name="baumName" type="string"></element>
+        </sequence>
+        <attribute name="baumNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="gueteItemType">
+        <sequence>
+            <element name="gueteKurz" type="string"></element>
+        </sequence>
+        <attribute name="gueteNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="sorteItemType">
+        <sequence>
+            <element name="sorteKurz" type="string" maxOccurs="1" minOccurs="1"></element>
+            <element name="sorteName" type="string" maxOccurs="1" minOccurs="1"></element>
+        </sequence>
+        <attribute name="sorteNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+
+    <complexType name="polterItemType">
+        <sequence>
+            <element name="arbeitsSchritt" maxOccurs="1"
+                minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="-1"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="auftragsNr" maxOccurs="1"
+                minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="-1"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="jahr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="2016"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="kubaturNr" maxOccurs="1" minOccurs="1">
+                <simpleType>
+                    <restriction base="int">
+                        <minExclusive value="0"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="latitude" maxOccurs="1" minOccurs="0">
+                <simpleType>
+                    <restriction base="float">
+                        <minExclusive value="-1"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+            <element name="longitude" maxOccurs="1" minOccurs="0">
+                <simpleType>
+                    <restriction base="float">
+                        <minExclusive value="-1"></minExclusive>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="polterNr" use="required">
+            <simpleType>
+                <restriction base="int">
+                    <minExclusive value="0"></minExclusive>
+                </restriction>
+            </simpleType>
+        </attribute>
+    </complexType>
+</schema>
