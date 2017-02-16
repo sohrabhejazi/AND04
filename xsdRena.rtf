@@ -1,0 +1,1149 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Menlo-Italic;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red0\green128\blue0;\red0\green0\blue128;
+\red102\green14\blue122;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 <?
+\f1\i0\b \cf2 xml version=\cf3 "1.0" \cf2 encoding=\cf3 "UTF-8"
+\f0\i\b0 \cf0 ?>\uc0\u8232 
+\f2\i0 <
+\f1\b \cf4 schema \cf2 xmlns=\cf3 "http://www.w3.org/2001/XMLSchema" \cf2 targetNamespace=\cf3 "http://www.example.org/RenaXMLSchema" \cf2 xmlns:\cf5 tns\cf2 =\cf3 "http://www.example.org/RenaXMLSchema" \cf2 elementFormDefault=\cf3 "qualified"
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 element \cf2 name=\cf3 "RenaRoot" 
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 element \cf2 name=\cf3 "LoginSuccess" \cf2 type=\cf3 "boolean" \cf2 minOccurs=\cf3 "0" \cf2 maxOccurs=\cf3 "1" \cf2 default=\cf3 "false"
+\f2\b0 \cf0 > </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 element \cf2 name=\cf3 "Command"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "0"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "PullStammdaten" \cf2 type=\cf3 "boolean" \cf2 minOccurs=\cf3 "0" \cf2 maxOccurs=\cf3 "1" \cf2 default=\cf3 "false"
+\f2\b0 \cf0 > </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "PullAuftragsdaten" \cf2 type=\cf3 "boolean" \cf2 minOccurs=\cf3 "0" \cf2 maxOccurs=\cf3 "1" \cf2 default=\cf3 "false"
+\f2\b0 \cf0 > </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "PullPolterNummernKreis" \cf2 type=\cf3 "boolean" \cf2 minOccurs=\cf3 "0" \cf2 maxOccurs=\cf3 "1" \cf2 default=\cf3 "false"
+\f2\b0 \cf0 > </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 element \cf2 name=\cf3 "Stammdaten" \cf2 minOccurs=\cf3 "0" \cf2 maxOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "BaumartTable"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "BaumartItem" \cf2 type=\cf3 "tns:baumartItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueBaumNr"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:BaumartItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@baumNr" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueBaumKurz"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:BaumartItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:baumKurz" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueBaumName"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:BaumartItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:baumName" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "SorteTable"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "SorteItem" \cf2 type=\cf3 "tns:sorteItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueSorteNr"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:SorteItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@sorteNr" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueSorteKurz"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:SorteItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:sorteKurz" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueSorteName"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:SorteItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:sorteName" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "GueteTable"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "GueteItem" \cf2 type=\cf3 "tns:gueteItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueGueteNr"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:GueteItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@gueteNr" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueGueteKurz"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:GueteItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:gueteKurz" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "RelationTable-1"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "Relation-1-Item" \cf2 type=\cf3 "tns:Relation-1-ItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "uniqueKeyCode"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:Relation-1-Item" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:baumNr"
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:sorteNr"
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:gueteNr"
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "RelationTable-2"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "Relation-2-Item" \cf2 type=\cf3 "tns:Relation-2-ItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "uniqueKeyCode2"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:Relation-2-Item" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:kubNr"
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:sorteNr"
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "KauferTable"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "KauferItem" \cf2 type=\cf3 "tns:KauferItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniquekauferNr"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:KauferItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@kauferNr" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "KubaturVerfahrenTable"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "KubaturVerfahrenItem" \cf2 type=\cf3 "tns:KubaturVerfahrenType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueKubaturNr"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:KubaturVerfahrenItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@kubNr" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "ForstAmtUndRevierTables" \cf2 minOccurs=\cf3 "1" \cf2 maxOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "ForstAmtTable" \cf2 type=\cf3 "tns:ForstAmtType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueFoa"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:ForstAmtTable" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@FoaNr" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueFoaName"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:ForstAmtTable" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:FoaName" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueRevier"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:ForstAmtTable/*" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@RevNr" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniqueRevierName"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:ForstAmtTable/*" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:RevName" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 element \cf2 name=\cf3 "Auftragsdaten" \cf2 minOccurs=\cf3 "1" \cf2 maxOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "PolterTable"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "PoltertItem" \cf2 type=\cf3 "tns:polterItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "UniquePolterNr"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:PoltertItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@polterNr" 
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "KopfdatenTable"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "0"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "KopfdatenItem" \cf2 type=\cf3 "tns:kopfdatenItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "uniquekopfdaten"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:KopfdatenItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:arbeitsSchritt"
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:auftragsNr"
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:revierNr"
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:jahr"
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                             <
+\f1\b \cf4 element \cf2 name=\cf3 "NbeTable"  \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "0"
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                         <
+\f1\b \cf4 element \cf2 name=\cf3 "NbeItem" \cf2 type=\cf3 "tns:nbeItemType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                                     </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                                 </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                                 <
+\f1\b \cf4 unique \cf2 name=\cf3 "uniqueNbe"
+\f2\b0 \cf0 >\uc0\u8232                                     <
+\f1\b \cf4 selector \cf2 xpath=\cf3 "tns:NbeItem" 
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "@holzNr"
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:polterNr"
+\f2\b0 \cf0 />\uc0\u8232                                     <
+\f1\b \cf4 field \cf2 xpath=\cf3 "tns:teilStueck"
+\f2\b0 \cf0 />\uc0\u8232                                 </
+\f1\b \cf4 unique
+\f2\b0 \cf0 >\uc0\u8232                             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232                         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 attribute \cf2 name=\cf3 "BenutzerName" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "string"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minLength \cf2 value=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minLength
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 attribute \cf2 name=\cf3 "Passwort" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "string"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minLength \cf2 value=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minLength
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "nbeItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "polterNr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "kauferNr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "baumartNr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "sorteNr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "gueteNr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "teilStueck" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1" \cf2 default=\cf3 "0"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "-1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "laenge" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "float"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "durchmesser" \cf2 maxOccurs=\cf3 "1"\uc0\u8232                 \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "stueck" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1" \cf2 default=\cf3 "0"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "-1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "menge" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1" \cf2 default=\cf3 "0"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "-1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232 \u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "holzNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "kopfdatenItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "arbeitsSchritt" \cf2 maxOccurs=\cf3 "1"\uc0\u8232                 \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "auftragsNr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "revierNr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "jahr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "2016"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "ForstAmtType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "FoaName" \cf2 type=\cf3 "string" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "Reviere" \cf2 type=\cf3 "tns:RevierType" \cf2 maxOccurs=\cf3 "unbounded" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "FoaNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "RevierType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "RevName" \cf2 type=\cf3 "string" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "RevNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "KubaturVerfahrenType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "kubName" \cf2 type=\cf3 "string" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "vermNr" \cf2 type=\cf3 "int"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "vermKurz" \cf2 type=\cf3 "string"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "vermName" \cf2 type=\cf3 "string"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "kubNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "KauferItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "kauferName" \cf2 type=\cf3 "string"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "kauferNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "Relation-2-ItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "kubNr"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "sorteNr"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "Relation-1-ItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "baumNr"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "sorteNr"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "gueteNr"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "baumartItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "baumKurz" \cf2 type=\cf3 "string"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "baumName" \cf2 type=\cf3 "string"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "baumNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "gueteItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "gueteKurz" \cf2 type=\cf3 "string"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "gueteNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "sorteItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "sorteKurz" \cf2 type=\cf3 "string" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "sorteName" \cf2 type=\cf3 "string" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "sorteNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 \u8232     <
+\f1\b \cf4 complexType \cf2 name=\cf3 "polterItemType"
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "arbeitsSchritt" \cf2 maxOccurs=\cf3 "1"\uc0\u8232                 \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "-1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "auftragsNr" \cf2 maxOccurs=\cf3 "1"\uc0\u8232                 \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "-1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "jahr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "2016"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "kubaturNr" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "1"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "latitude" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "0"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "float"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "-1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 element \cf2 name=\cf3 "longitude" \cf2 maxOccurs=\cf3 "1" \cf2 minOccurs=\cf3 "0"
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 restriction \cf2 base=\cf3 "float"
+\f2\b0 \cf0 >\uc0\u8232                         <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "-1"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                     </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 element
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 sequence
+\f2\b0 \cf0 >\uc0\u8232         <
+\f1\b \cf4 attribute \cf2 name=\cf3 "polterNr" \cf2 use=\cf3 "required"
+\f2\b0 \cf0 >\uc0\u8232             <
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232                 <
+\f1\b \cf4 restriction \cf2 base=\cf3 "int"
+\f2\b0 \cf0 >\uc0\u8232                     <
+\f1\b \cf4 minExclusive \cf2 value=\cf3 "0"
+\f2\b0 \cf0 ></
+\f1\b \cf4 minExclusive
+\f2\b0 \cf0 >\uc0\u8232                 </
+\f1\b \cf4 restriction
+\f2\b0 \cf0 >\uc0\u8232             </
+\f1\b \cf4 simpleType
+\f2\b0 \cf0 >\uc0\u8232         </
+\f1\b \cf4 attribute
+\f2\b0 \cf0 >\uc0\u8232     </
+\f1\b \cf4 complexType
+\f2\b0 \cf0 >\uc0\u8232 </
+\f1\b \cf4 schema
+\f2\b0 \cf0 >\
+}
